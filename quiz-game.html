@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz Game</title>
+        <link rel="stylesheet" href="quiz-game.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mini Quiz Game</h1>
+            <h3>20 multiple choice questions</h3>
+        </header>
+        <main>
+            <!-- start screen with begin btn -->
+            <button id="start-btn" type="button">Begin Game</button>
+            <!-- quiz container (hidden until game begins) -->
+            <div id="quiz-container">
+                <!-- displays current question number and question text, and score -->
+                <div id="question-score-container">
+                    <p class="question"><span id="q"><strong></strong></span> <span id="question"></span></p>
+                    <p class="score">Score: <span id="score"><strong>0</strong></span></p>
+                </div>
+                <!-- multiple choice options container -->
+                <div id="options-container">
+                    <div class="options-row-container">
+                        <p id="option-a"></p>
+                        <p id="option-b"></p>
+                    </div>
+                    <div class="options-row-container">
+                        <p id="option-c"></p>
+                        <p id="option-d"></p>
+                    </div>
+                </div>
+                <!-- correct answer container -->
+                <div id="answer-container">
+                    <p id="correct-incorrect"></p>
+                    <p id="answer"></p>
+                </div>
+                <!-- next question btn -->
+                <div class="next-container">
+                    <button id="next-btn">Next Question</button>
+                </div>
+            </div>
+        </main>
+        <hr>
+        <footer>Copyright &copy; 2025 - nihilistic-lex</footer>
+        <script src="quiz-game.js"></script>
+    </body>
+</html>

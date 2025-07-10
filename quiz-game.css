@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* colours and fonts */
+
+:root {
+    /* colours */
+    --light-grey: #ededed;
+    --dark-grey: #323232;
+    --dark-blue: #000937;
+    --light-blue: #00eaff;
+    --dark-green: #0a4300;
+    --light-green: #d1ffc9;
+    --dark-red: #590000;
+    --light-red: #ffd4d4;
+
+    /* font family */
+    --font-family: 'Lato', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h3 {
+    padding-top: 15px;
+}
+
+/* body height and main flex ensure footer remains at bottom of page */
+
+main {
+    flex: 1;
+}
+
+button {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    border: 2px solid var(--light-grey);
+    border-radius: 4px;
+    width: 170px;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: var(--dark-blue);
+    color: var(--light-blue)
+}
+
+#start-btn {
+    margin: 25vh auto 25px;
+}
+
+#next-btn {
+    margin: 30px auto;
+}
+
+#quiz-container {
+    border: 2px solid;
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: none;
+}
+
+/* top section of quiz: current question and score display */
+
+#question-score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid;
+    border-width: 100%;
+    padding: 10px 20px;
+    height: 130px;
+}
+
+.question {
+    padding-right: 15px;
+    padding-block: 10px;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.score {
+    border-left: 2px solid;
+    padding-left: 10px;
+    width: 115px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* multiple choice option container layout and hover styling */
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-row-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#option-a,
+#option-b,
+#option-c,
+#option-d {
+    border: 2px solid;
+    padding: 20px;
+    margin-block: 30px;
+    cursor: pointer;
+    text-align: center;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#option-c,
+#option-d {
+    margin-top: 0;
+}
+
+#option-a:hover,
+#option-b:hover,
+#option-c:hover,
+#option-d:hover {
+    background-color: var(--light-grey);
+    color: var(--dark-blue);
+}
+
+/* answer container styling */
+
+#answer-container {
+    margin: 30px auto 0;
+    padding: 15px 20px;
+    text-align: center;
+    width: 240px;
+    display: none;
+    border: 2px solid;
+}
+
+hr {
+    width: 90%;
+    margin: 25px auto 10px;
+    background-color: var(--light-grey);
+    border-color: var(--light-grey);
+}
+
+footer {
+    font-size: 1rem;
+    padding: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* media queries for smaller screens */
+
+@media screen and (max-width: 650px) {
+    #quiz-container {
+        margin: 20px;
+        margin-bottom: 0;
+    }
+
+    .options-row-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #option-a,
+    #option-b,
+    #option-c,
+    #option-d {
+        margin: 20px 10px;
+        width: 85%;
+    }
+
+    #option-a {
+        margin-top: 30px;
+    }
+
+    #option-d {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 1rem;
+    }
+
+    #question-score-container {
+        padding: 7px 14px;
+    }
+
+    .score {
+        width: 85px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
