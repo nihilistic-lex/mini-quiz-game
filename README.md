@@ -1,6 +1,6 @@
 # 20-Question Quiz Game
 
-Test your general knowledge with this 20-question quiz game.
+Test your general knowledge with this 20-question quiz game.  
 How did you do?
 
 A browser-based quiz game built with HTML, CSS, and JavaScript.
